@@ -10,7 +10,7 @@ const Connection = ({ connect, disconnect, connectBtn }) => {
   };
   const onFinish = (values) => {
     const { host, clientId, port, username, password } = values;
-    const url = `wss://${host}:${port}/mqtt`;
+    const url = `ws://${host}:${port}/mqtt`;
     const options = {
       keepalive: 30,
       protocolId: 'MQTT',
